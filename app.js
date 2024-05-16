@@ -1,11 +1,13 @@
-//requiring module and created file
-const fs = require('fs')
+//requiring module and created fi
+const chalk = require('chalk')
 const getNotes = require('./notes.js');
 
 //to access/call function from another file
 
 const theNote = getNotes();
 console.log(theNote)
+const printMessage = chalk.blue.inverse.bold('Alhamdulillah')
+console.log(printMessage)
 
 
 
