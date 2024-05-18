@@ -27,7 +27,7 @@ yargs.command({
     describe: 'Add a new note',
     builder: {
         title: {
-            describe: 'Displaying the needed tittle',
+            describe: 'Displaying the needed title',
             demandOption: true,
             type: 'string'
 
@@ -47,8 +47,17 @@ yargs.command({
 yargs.command({
     command: 'remove',
     describe: 'remove the added note',
-    handler: function(){
-        console.log('removing the new note')
+    builder: {
+        title: {
+            describe: 'removing the needed title',
+            demandOption: true,
+            type: 'string'
+
+        },
+    },
+    handler: function(argv){
+      notes.removeNote(argv.title)
+       //console.log('title: some title')
     }
 })
 
@@ -56,7 +65,7 @@ yargs.command({
     command: 'list',
     describe: 'list the available notes',
     handler: function(){
-        console.log('listing the new note...')
+        console.log('listing   the new note...')
     }
 })
 
