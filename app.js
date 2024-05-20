@@ -19,7 +19,7 @@ if(info === 'add') {
     //console.log('Adding notes') 
 }else if(info === 'remove'){
     //console.log('Removing notes') 
-}
+
 
 
 yargs.command({
